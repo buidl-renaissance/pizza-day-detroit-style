@@ -31,6 +31,11 @@ body {
   color: #1a1a1a;
   text-align: center;
   background: url('/paper-texture.jpg') fixed;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 .hero {
   min-height: 100vh;
@@ -211,12 +216,20 @@ ul li {
     max-width: 200px;
   }
   
-  .section {
-    padding: 20px 15px;
+  section {
+    padding: 2rem 1rem;
   }
   
   p, ul {
     font-size: 16px;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  body {
+    background-attachment: fixed;
   }
 }
 
@@ -229,7 +242,15 @@ ul li {
     max-width: 180px;
   }
   
-  .section {
-    padding: 15px;
+  section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  body {
+    background-attachment: fixed;
   }
 }

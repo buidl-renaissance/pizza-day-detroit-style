@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -97,7 +99,7 @@ export default function Home() {
             <strong>Deadline:</strong> April 1st
           </p>
           <div className="cta">
-            <a href="https://builddetroit.xyz" target="_blank">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHDq0XOozG8TbZHztm9tsUa2YZfRW1XQM2OFC1GPRId5hYiA/viewform?usp=header" target="_blank">
               SUBMIT
             </a>
           </div>
@@ -224,7 +226,7 @@ export default function Home() {
             </div>
           </div>
           <div className="cta">
-            <a href="https://builddetroit.xyz" target="_blank">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuKP2xd8c26Rm0T1UI7Jn-p99aQiOslnMP3ln-JCk-PeFUhQ/viewform?usp=header" target="_blank">
               APPLY TO SPONSOR
             </a>
           </div>
