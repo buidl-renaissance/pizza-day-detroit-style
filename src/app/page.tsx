@@ -99,7 +99,10 @@ export default function Home() {
             <strong>Deadline:</strong> April 1st
           </p>
           <div className="cta">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHDq0XOozG8TbZHztm9tsUa2YZfRW1XQM2OFC1GPRId5hYiA/viewform?usp=header" target="_blank">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdHDq0XOozG8TbZHztm9tsUa2YZfRW1XQM2OFC1GPRId5hYiA/viewform?usp=header"
+              target="_blank"
+            >
               SUBMIT
             </a>
           </div>
@@ -147,10 +150,8 @@ export default function Home() {
             (May 24-26), one of the world&apos;s premier electronic music
             events, drawing thousands of music and tech enthusiasts.
           </p>
-        </section>
 
-        <section>
-          <h2 className="alternate">Participating Pizza Locations</h2>
+          <h3 className="subtext">Participating Pizza Locations</h3>
           <ul>
             <li>Michigan & Trumbull Pizza</li>
             <li>Supino&apos;s Pizzeria</li>
@@ -159,45 +160,50 @@ export default function Home() {
             <li>Buddy&apos;s Pizza</li>
             <li>Mootz Pizzeria + Bar</li>
           </ul>
-        </section>
 
-        <section>
-          <h2 className="alternate">How It Works</h2>
+          <h3 className="subtext">How It Works</h3>
           <ul>
             <li>
-              <strong>Register & Check-In:</strong> Join the launch party at
-              Lincoln Street Art Park on May 22 or register online.
+              <div className="subheading">Register & Check-In</div>
+              <div>
+                Join the launch party at Lincoln Street Art Park on May 22 or
+                register online.
+              </div>
             </li>
             <li>
-              <strong>Scavenger Hunt Challenges:</strong> Visit five
-              participating pizza spots by May 26th & tap the PizzaDAO mascot to
-              collect POAPs.
+              <div className="subheading">Scavenger Hunt Challenges</div>
+              <div>
+                Visit five participating pizza spots by May 26th & tap the
+                PizzaDAO mascot to collect POAPs.
+              </div>
             </li>
             <li>
-              <strong>Social Media Engagement:</strong> Post progress on X
-              (@pizzadao) or share POAP Moments to win Social Ambassador Prizes.
+              <div className="subheading">Social Media Engagement</div>
+              <div>
+                Post progress on X (@pizzadao) or share POAP Moments to win
+                Social Ambassador Prizes.
+              </div>
+            </li>
+          </ul>
+
+          <h3 className="subtext">Prizes</h3>
+          <ul>
+            <li>
+              <div className="subheading">Grand Prize</div>
+              <div>Free Pizza for a Year!</div>
+            </li>
+            <li>
+              <div className="subheading">Mini Prizes</div>
+              <div>NFTs, crypto rewards, festival VIP tickets, and more.</div>
             </li>
           </ul>
         </section>
 
-        <section>
-          <h2 className="alternate">Prizes</h2>
-          <ul>
-            <li>
-              <strong>Grand Prize:</strong> Free Pizza for a Year!
-            </li>
-            <li>
-              <strong>Mini Prizes:</strong> NFTs, crypto rewards, festival VIP
-              tickets, and more.
-            </li>
-          </ul>
-        </section>
-
-        <section className="flex flex-col gap-4">
-          <div className="flex flex-col gap-4 text-left">
-            <h2>Why Sponsor?</h2>
+        <section className="sponsor-section flex flex-col gap-4">
+          <div>
+            <h2 className="alternate">Why Sponsor?</h2>
             <div>
-              <p>
+              <p className="subtext">
                 Detroit Bitcoin Pizza Day is a high-impact brand activation
                 opportunity where sponsors gain:
               </p>
@@ -225,11 +231,12 @@ export default function Home() {
               (approx. attendance: 100,000 from around the world).
             </div>
           </div>
-          <div className="cta">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuKP2xd8c26Rm0T1UI7Jn-p99aQiOslnMP3ln-JCk-PeFUhQ/viewform?usp=header" target="_blank">
-              APPLY TO SPONSOR
-            </a>
-          </div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeuKP2xd8c26Rm0T1UI7Jn-p99aQiOslnMP3ln-JCk-PeFUhQ/viewform?usp=header"
+            target="_blank"
+          >
+            <div className="cta">APPLY TO SPONSOR</div>
+          </a>
         </section>
       </main>
       <footer className="max-w-[900px] mx-auto p-6 flex gap-[24px] flex-wrap items-center justify-center text-[#d9534f]">

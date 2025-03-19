@@ -52,19 +52,12 @@ body {
   margin-bottom: -1rem;
 }
 .hero h1 {
-  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-size: clamp(2.5rem, 10vw, 7rem);
   font-weight: 800;
   font-family: "Bricolage Grotesque", sans-serif;
   color: var(--foreground);
   text-transform: uppercase;
   line-height: 0.9;
-}
-h2 {
-  font-family: "Essonnes", serif;
-  font-size: clamp(24px, 5vw, 40px);
-  /* font-style: italic; */
-  font-weight: 700;
-  color: #1a1a1a;
 }
 .hero .year {
   font-size: clamp(18px, 4vw, 32px);
@@ -101,6 +94,13 @@ h2 {
 h2.alternate {
   color: #333;
   font-style: italic;
+}
+h3 {
+  color: #333;
+  font-style: italic;
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  margin-top: 2rem;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 p,
 ul {
