@@ -2,100 +2,279 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen font-sans">
+      <main className="container mx-auto">
+        <section className="hero">
+          <img src="/pizza-dao.gif" alt="Detroit Bitcoin Pizza Day Logo" />
+          <h1>
+            DETROIT
+            <br />
+            BITCOIN PIZZA
+            <br />
+            DAY
+          </h1>
+          <div className="year">2025</div>
+          <p className="subtext">
+            The Detroit edition of PizzaDAO’s Global Bitcoin Pizza Party joins
+            forces with Art Night for an unforgettable evening of pizza, music,
+            and interactive art!
+          </p>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section>
+          <h2 className="alternate">
+            Celebrating Bitcoin, Art, Music, and Community in Detroit
+          </h2>
+          <p>
+            Detroit proudly joins the{" "}
+            <strong>Global Bitcoin Pizza Party</strong>, an international
+            celebration organized by <strong>PizzaDAO</strong> to commemorate
+            the first real-world cryptocurrency transaction.
+          </p>
+          <p>
+            In 2010, Laszlo Hanyecz made history by purchasing two pizzas for
+            10,000 BTC—the first real-world use of Bitcoin. Today, this event
+            spans 100+ cities, uniting crypto communities, supporting local
+            pizzerias, and promoting decentralized technology.
+          </p>
+          <p className="mt-4">
+            <strong>Learn more:</strong>{" "}
+            <a href="https://globalpizzaparty.xyz" target="_blank">
+              GlobalPizzaParty.xyz
+            </a>
+          </p>
+        </section>
+
+        <section>
+          {/* <p className="date">Thursday, May 22nd</p> */}
+          <h2 className="alternate">Detroit PizzaDAO’s Global Pizza Party</h2>
+          <ul className="pills">
+            <li>
+              <div className="pill">
+                <strong>ART NIGHT DETROIT</strong>
+              </div>
+              <p>
+                Creating a community of creative people to come together for the
+                sake of art since 2018.
+              </p>
+            </li>
+            <li>
+              <div className="pill alternate">
+                <strong>
+                  Detroit Bitcoin Pizza
+                  <br />
+                  Day Scavenger Hunt
+                </strong>
+              </div>
+              <p>
+                A multi-day scavenger hunt celebrating the intersection of
+                music, technology, and culture
+              </p>
+            </li>
+            <li>
+              <div className="pill">
+                <strong>
+                  MOVEMENT
+                  <br />
+                  Kickoff Party
+                </strong>
+              </div>
+              <p>
+                <strong>Official Movement 2025 kickoff party</strong>
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="alternate">Pizza Box Art Contest</h2>
+          <p>
+            Submit your digital pizza box artwork for a chance to get your
+            design printed on pizza boxes for the Detroit PizzaDAO&apos;s Global
+            Pizza Party!
+          </p>
+          <p>
+            <strong>Deadline:</strong> April 1st
+          </p>
+          <div className="cta">
+            <a href="https://builddetroit.xyz" target="_blank">
+              SUBMIT
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="alternate">What&apos;s Happening?</h2>
+          <ul>
+            <li>
+              Launch of{" "}
+              <strong>Detroit Bitcoin Pizza Day Scavenger Hunt</strong> – Grab
+              an exclusive Pizza POAP (Proof of Attendance Protocol) to start
+              your adventure!
+            </li>
+            <li>Live DJs, immersive art, and activations</li>
+            <li>Exclusive sponsor swag & surprise giveaways</li>
+            <li>
+              <strong>VIP Experience (6 PM):</strong> Hosted appetizers,
+              specialty pizzas, drinks, & VIP swag bag.
+            </li>
+            <li>
+              <strong>General Admission (7 PM - 1 AM):</strong> DJs, live art,
+              pizzas, & Pizza Art Contest.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="alternate">
+            Scavenger Hunt
+            <br />
+            <span className="subtext">May 23rd to May 26th</span>
+          </h2>
+          <p>
+            Participants can boost their <strong>Pizza Pursuit score</strong>{" "}
+            by:
+          </p>
+          <ul>
+            <li>Completing festival-exclusive challenges.</li>
+            <li>Visiting sponsor activations for surprise rewards.</li>
+            <li>Engaging in crypto-powered art and music experiences.</li>
+          </ul>
+          <p>
+            The celebration connects with <strong>Movement Festival</strong>{" "}
+            (May 24-26), one of the world&apos;s premier electronic music
+            events, drawing thousands of music and tech enthusiasts.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="alternate">Participating Pizza Locations</h2>
+          <ul>
+            <li>Michigan & Trumbull Pizza</li>
+            <li>Supino&apos;s Pizzeria</li>
+            <li>Pie Sci Pizza</li>
+            <li>Grandma Bob&apos;s Pizza</li>
+            <li>Buddy&apos;s Pizza</li>
+            <li>Mootz Pizzeria + Bar</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="alternate">How It Works</h2>
+          <ul>
+            <li>
+              <strong>Register & Check-In:</strong> Join the launch party at
+              Lincoln Street Art Park on May 22 or register online.
+            </li>
+            <li>
+              <strong>Scavenger Hunt Challenges:</strong> Visit five
+              participating pizza spots by May 26th & tap the PizzaDAO mascot to
+              collect POAPs.
+            </li>
+            <li>
+              <strong>Social Media Engagement:</strong> Post progress on X
+              (@pizzadao) or share POAP Moments to win Social Ambassador Prizes.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="alternate">Prizes</h2>
+          <ul>
+            <li>
+              <strong>Grand Prize:</strong> Free Pizza for a Year!
+            </li>
+            <li>
+              <strong>Mini Prizes:</strong> NFTs, crypto rewards, festival VIP
+              tickets, and more.
+            </li>
+          </ul>
+        </section>
+
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-left">
+            <h2>Why Sponsor?</h2>
+            <div>
+              <p>
+                Detroit Bitcoin Pizza Day is a high-impact brand activation
+                opportunity where sponsors gain:
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="feature-grid">
+              <div className="feature-box alternate">
+                Exposure to Detroit&apos;s Web3, art, and music audience.
+              </div>
+              <div className="feature-box alternate">
+                Celebration of Bitcoin Pizza Day through collaboration with
+                Detroit pizzerias.
+              </div>
+              <div className="feature-box alternate">
+                Custom brand activations to showcase innovation.
+              </div>
+              <div className="feature-box alternate">
+                Visibility across 100+ cities through PizzaDAO&apos;s global
+                campaign.
+              </div>
+            </div>
+            <div className="feature-box alternate">
+              Pre-Party for Detroit&apos;s Movement Festival weekend <br />{" "}
+              (approx. attendance: 100,000 from around the world).
+            </div>
+          </div>
+          <div className="cta">
+            <a href="https://builddetroit.xyz" target="_blank">
+              APPLY TO SPONSOR
+            </a>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="max-w-[900px] mx-auto p-6 flex gap-[24px] flex-wrap items-center justify-center text-[#d9534f]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://builddetroit.xyz"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
             src="/file.svg"
-            alt="File icon"
+            alt="Detroit icon"
             width={16}
             height={16}
           />
-          Learn
+          Built in Detroit
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://bitcoin.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
             src="/window.svg"
-            alt="Window icon"
+            alt="Bitcoin icon"
             width={16}
             height={16}
           />
-          Examples
+          Bitcoin
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://en.wikipedia.org/wiki/Bitcoin_pizza_transaction"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
             src="/globe.svg"
-            alt="Globe icon"
+            alt="Pizza icon"
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Pizza Day →
         </a>
       </footer>
     </div>
