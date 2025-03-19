@@ -30,13 +30,24 @@ body {
   padding: 0;
   color: #1a1a1a;
   text-align: center;
-  background: url('/paper-texture.jpg') fixed;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/paper-texture.jpg');
   background-size: cover;
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  z-index: -1; /* Ensures it's behind the content */
 }
+
 .hero {
   min-height: 100vh;
   padding: 2rem 1rem;
@@ -147,7 +158,7 @@ ul li {
 }
 
 .pill.alternate {
-  background: #fff;
+  background: transparent;
   color: var(--foreground);
   border: 2px solid var(--foreground);
 }
@@ -228,16 +239,9 @@ ul li {
     grid-template-columns: 1fr 1fr;
   }
   
-  body {
-    background-attachment: fixed;
-  }
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 20px 15px;
-  }
-  
+@media (max-width: 480px) {  
   .hero img {
     max-width: 180px;
   }
@@ -250,7 +254,4 @@ ul li {
     grid-template-columns: 1fr;
   }
   
-  body {
-    background-attachment: fixed;
-  }
 }

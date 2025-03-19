@@ -151,15 +151,16 @@ export default function Home() {
             events, drawing thousands of music and tech enthusiasts.
           </p>
 
-          <h3 className="subtext">Participating Pizza Locations</h3>
-          <ul>
+          <h3 className="subtext mb-4">Participating Pizza Locations</h3>
+          {/* <ul>
             <li>Michigan & Trumbull Pizza</li>
             <li>Supino&apos;s Pizzeria</li>
             <li>Pie Sci Pizza</li>
             <li>Grandma Bob&apos;s Pizza</li>
             <li>Buddy&apos;s Pizza</li>
             <li>Mootz Pizzeria + Bar</li>
-          </ul>
+          </ul> */}
+          <Image className="m-auto" src="/pizza-map.jpg" alt="Pizza Locations" width={600} height={600} />
 
           <h3 className="subtext">How It Works</h3>
           <ul>
