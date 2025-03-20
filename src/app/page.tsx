@@ -15,12 +15,16 @@ export default function Home() {
             <br />
             DAY
           </h1>
-          <div className="year">2025</div>
+          <div className="year">May 22nd, 2025</div>
           <p className="subtext">
             The Detroit edition of PizzaDAO’s Global Bitcoin Pizza Party joins
-            forces with Art Night for an unforgettable evening of pizza, music,
+            forces with <br />
+            Art Night for an unforgettable evening of pizza, music,
             and interactive art!
           </p>
+          <a href="https://lu.ma/xamh1ryu" target="_blank">
+            <div className="cta">RSVP</div>
+          </a>
         </section>
 
         <section>
@@ -108,9 +112,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section className="text-left">
           <h2 className="alternate">What&apos;s Happening?</h2>
-          <ul>
+          <ul className="list-disc list-inside">
             <li>
               Launch of{" "}
               <strong>Detroit Bitcoin Pizza Day Scavenger Hunt</strong> – Grab
@@ -130,19 +134,19 @@ export default function Home() {
           </ul>
         </section>
 
-        <section>
+        <section className="text-left">
           <h2 className="alternate">
             Scavenger Hunt
             <br />
             <span className="subtext">May 23rd to May 26th</span>
           </h2>
           <p>
-            Participants can boost their <strong>Pizza Pursuit score</strong>{" "}
+            Participants can boost their <strong>Pizza Scavenger Hunt Score</strong>{" "}
             by:
           </p>
-          <ul>
+          <ul className="list-disc list-inside">
             <li>Completing festival-exclusive challenges.</li>
-            <li>Visiting sponsor activations for surprise rewards.</li>
+            {/* <li>Visiting sponsor activations for surprise rewards.</li> */}
             <li>Engaging in crypto-powered art and music experiences.</li>
           </ul>
           <p>
@@ -160,9 +164,14 @@ export default function Home() {
             <li>Buddy&apos;s Pizza</li>
             <li>Mootz Pizzeria + Bar</li>
           </ul> */}
-          <Image className="m-auto" src="/pizza-map.jpg" alt="Pizza Locations" width={600} height={600} />
+          <Image
+            src="/pizza-map.jpg"
+            alt="Pizza Locations"
+            width={600}
+            height={600}
+          />
 
-          <h3 className="subtext">How It Works</h3>
+          {/* <h3 className="subtext">How It Works</h3>
           <ul>
             <li>
               <div className="subheading">Register & Check-In</div>
@@ -185,17 +194,17 @@ export default function Home() {
                 Social Ambassador Prizes.
               </div>
             </li>
-          </ul>
+          </ul> */}
 
-          <h3 className="subtext">Prizes</h3>
-          <ul>
-            <li>
-              <div className="subheading">Grand Prize</div>
-              <div>Free Pizza for a Year!</div>
+          <h3 className="subtext font-bold">PRIZES & REWARDS</h3>
+          <ul className="prize-list">
+            <li className="prize-item">
+              <div className="subheading text-[22px] text-[var(--foreground)]">🏆 Grand Prize</div>
+              <div className="font-bold text-[20px]">Free Pizza for a Year!</div>
             </li>
-            <li>
-              <div className="subheading">Mini Prizes</div>
-              <div>NFTs, crypto rewards, festival VIP tickets, and more.</div>
+            <li className="prize-item mt-4">
+              <div className="subheading text-[22px] text-[var(--foreground)]">🎁 Mini Prizes</div>
+              <div className="font-bold text-[20px]">NFTs, crypto rewards, festival VIP tickets, and more.</div>
             </li>
           </ul>
         </section>

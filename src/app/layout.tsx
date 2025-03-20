@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins, Playfair_Display, Bricolage_Grotesque } from "next/font/google";
-// import localFont from "next/font/local";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,26 +33,26 @@ const bricolageGrotesque = Bricolage_Grotesque({
   variable: '--font-bricolage-grotesque',
 });
 
-// const essonnes = localFont({
-//   src: [
-//     {
-//       path: '../fonts/Essonnes-Regular.woff2',
-//       weight: '400',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../fonts/Essonnes-Bold.woff2',
-//       weight: '700',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../fonts/Essonnes-Italic.woff2',
-//       weight: '400',
-//       style: 'italic',
-//     },
-//   ],
-//   variable: '--font-essonnes',
-// });
+const essonnes = localFont({
+  src: [
+    {
+      path: '../fonts/Essonnes-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/Essonnes-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/Essonnes-Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-essonnes',
+});
 
 export const metadata: Metadata = {
   title: "Detroit Bitcoin Pizza Day",
@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${playfairDisplay.variable} ${bricolageGrotesque.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${playfairDisplay.variable} ${bricolageGrotesque.variable} ${essonnes.variable} antialiased`}
       >
         {children}
       </body>
