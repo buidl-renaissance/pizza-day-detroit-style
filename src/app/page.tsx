@@ -100,7 +100,7 @@ export default function Home() {
             Pizza Party!
           </p>
           <p>
-            <strong>Deadline:</strong> May 1st
+            <strong>Deadline:</strong> April 22nd
           </p>
           <div className="cta">
             <a
