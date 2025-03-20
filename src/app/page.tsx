@@ -100,7 +100,7 @@ export default function Home() {
             Pizza Party!
           </p>
           <p>
-            <strong>Deadline:</strong> April 1st
+            <strong>Deadline:</strong> May 1st
           </p>
           <div className="cta">
             <a
@@ -282,18 +282,18 @@ export default function Home() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://en.wikipedia.org/wiki/Bitcoin_pizza_transaction"
+          href="https://www.globalpizzaparty.xyz/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
             src="/globe.svg"
-            alt="Pizza icon"
+            alt="Global Pizza Party"
             width={16}
             height={16}
           />
-          Pizza Day →
+          Global Pizza Party →
         </a>
       </footer>
     </div>
