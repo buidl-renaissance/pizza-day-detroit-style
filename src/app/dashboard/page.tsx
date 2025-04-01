@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { PoapToken } from '@/utils/interfaces';
-
+import Image from 'next/image';
 export default function DashboardPage() {
   const [walletAddress, setWalletAddress] = useState('');
   const [loading, setLoading] = useState(true);
@@ -124,11 +124,13 @@ export default function DashboardPage() {
                   {relevantPoap.map((poap) => (
                     <li key={poap.tokenId} className="py-4">
                       <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0">
-                          <img 
+                        <div className="flex-shrink-0 w-32 h-32">
+                          <Image 
                             src={poap.event.image_url} 
                             alt={poap.event.name} 
-                            className="h-16 w-16 rounded-full border-2 border-gray-200"
+                            className="h-32 w-32 rounded-full border-2 border-gray-200"
+                            width={128}
+                            height={128}
                           />
                         </div>
                         <div className="flex-1 min-w-0 text-left">
@@ -163,7 +165,7 @@ export default function DashboardPage() {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-yellow-700">
-                      You haven't collected any POAPs yet. Your scavenger hunt progress will appear here once the event begins.
+                      You haven&apos;t collected any POAPs yet. Your scavenger hunt progress will appear here once the event begins.
                     </p>
                   </div>
                 </div>
