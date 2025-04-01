@@ -170,10 +170,10 @@ export default function Register() {
                   <div className="px-4 py-2 bg-gray-100 rounded-md break-all mb-3">
                     {walletAddress}
                   </div>
-                  {/* <p className="font-medium mb-2">Registered Email:</p>
+                  <p className="font-medium mb-2">Registered Email:</p>
                   <div className="px-4 py-2 bg-gray-100 rounded-md break-all">
                     {registeredEmail}
-                  </div> */}
+                  </div>
                   <div className="mt-4">
                     <a 
                       href="/dashboard" 
