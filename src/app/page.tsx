@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import Register from "./register";
 export default function Home() {
   return (
     <div className="min-h-screen font-sans">
@@ -154,6 +154,8 @@ export default function Home() {
             (May 24-26), one of the world&apos;s premier electronic music
             events, drawing thousands of music and tech enthusiasts.
           </p>
+
+          <Register />
 
           <h3 className="subtext mb-4">Participating Pizza Locations</h3>
           {/* <ul>
