@@ -7,6 +7,7 @@ declare global {
   interface Window {
     ethereum?: {
       request: (args: { method: string }) => Promise<string[]>;
+      isMetaMask?: boolean;
     };
   }
 }
@@ -21,10 +22,18 @@ export default function Register() {
   const [showModal, setShowModal] = useState(false);
   const [alreadyRegistered, setAlreadyRegistered] = useState(false);
   const [registeredEmail, setRegisteredEmail] = useState("");
+  const [isMobileSafari, setIsMobileSafari] = useState(false);
   
   const router = useRouter();
 
   useEffect(() => {
+    // Check if user is on Mobile Safari
+    const ua = window.navigator.userAgent;
+    const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    const webkit = !!ua.match(/WebKit/i);
+    const isMobileSafari = iOS && webkit && !ua.match(/CriOS/i) && !ua.match(/FxiOS/i);
+    setIsMobileSafari(isMobileSafari);
+
     // Check if wallet is already connected and registration exists
     const checkExistingRegistration = async () => {
       try {
@@ -61,6 +70,11 @@ export default function Register() {
     
     try {
       if (!window.ethereum) {
+        if (isMobileSafari) {
+          // Redirect to MetaMask mobile app
+          window.location.href = "https://metamask.app.link/dapp/" + window.location.host + window.location.pathname;
+          return;
+        }
         throw new Error("MetaMask is not installed. Please install MetaMask to continue.");
       }
       
@@ -200,11 +214,13 @@ export default function Register() {
               >
                 {isConnecting ? "Connecting..." : walletAddress ? 
                   `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 
-                  "Register Wallet"}
+                  isMobileSafari ? "Open in MetaMask App" : "Register Wallet"}
               </button>
               
               <p className="mt-6 text-sm text-center text-gray-600">
-                Connect your MetaMask wallet to participate in the Detroit Bitcoin Pizza Day Scavenger Hunt.
+                {isMobileSafari 
+                  ? "You'll be redirected to the MetaMask app to connect your wallet."
+                  : "Connect your MetaMask wallet to participate in the Detroit Bitcoin Pizza Day Scavenger Hunt."}
               </p>
             </div>
           )}
@@ -214,7 +230,7 @@ export default function Register() {
       {/* Registration Modal */}
       {showModal && walletAddress && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4">
             <h2 className="text-2xl font-bold mb-4">Complete Registration</h2>
             
             {error && (
@@ -242,6 +258,8 @@ export default function Register() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                   placeholder="your@email.com"
+                  autoCapitalize="off"
+                  autoCorrect="off"
                 />
               </div>
               

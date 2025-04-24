@@ -92,7 +92,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <section>
+        {/* <section>
           <h2 className="alternate">Pizza Box Art Contest</h2>
           <p>
             Submit your digital pizza box artwork for a chance to get your
@@ -110,7 +110,7 @@ export default function Home() {
               SUBMIT
             </a>
           </div>
-        </section>
+        </section> */}
 
         <section className="text-left">
           <h2 className="alternate">What&apos;s Happening?</h2>
